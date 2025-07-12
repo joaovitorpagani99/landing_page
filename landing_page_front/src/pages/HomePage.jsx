@@ -5,6 +5,7 @@ import Highlight from "../components/highlight/Highlight";
 import { getVehicle } from "../service/vehicleService";
 import VeicleDetails from "../components/details/VehicleDetails";
 import ContactForm from "../components/ContactForm/ContactForm";
+import Footer from "../components/Footer/Footer";
 
 function Home() {
   const [vehicle, setImagesVeicle] = useState([]);
@@ -27,14 +28,17 @@ function Home() {
 
   if (loading) return <p>Carregando ...</p>;
   return (
-    <main>
-      <Header />
-      <Highlight />
-      <Gallery images={vehicle.images} />
-      <VeicleDetails vehicle={vehicle} />
-      <ContactForm />
-    </main>
-  )
+    <>
+      <main>
+        <Header />
+        <Highlight />
+        <Gallery images={vehicle.images} />
+        <VeicleDetails vehicle={vehicle} />
+        <ContactForm />
+      </main>
+      <Footer />
+    </>
+  );
 }
 
 export default Home;

@@ -1,0 +1,33 @@
+.footer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 3rem;
+  gap: 20px;
+  background-color: #141414;
+  color: #cccccc;
+}
+
+.logoContainer img {
+  height: 50px;
+  margin-bottom: 20px;
+}
+
+.socialIcons {
+  display: flex;
+  gap: 2.5rem;
+}
+
+.socialLink {
+  color: #cccccc;
+  transition: color 0.3s ease;
+}
+
+.socialLink:hover {
+  color: #cccccc;
+}
+
+.icon {
+  font-size: 1.5rem;
+}
