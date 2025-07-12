@@ -1,0 +1,21 @@
+inherit_gem: { rubocop-rails-omakase: rubocop.yml }
+
+AllCops:
+  NewCops: enable
+  TargetRubyVersion: 3.1  
+  Exclude:
+    - 'db/schema.rb'
+    - 'bin/**/*'
+    - 'vendor/**/*'
+    - 'node_modules/**/*'
+    - 'tmp/**/*'
+    - 'config/initializers/devise.rb'
+
+Layout/LineLength:
+  Max: 120  
+
+Style/StringLiterals:
+  EnforcedStyle: single_quotes  
+  
+Style/StringLiterals:
+  ConsistentQuotesInMultiline: true
