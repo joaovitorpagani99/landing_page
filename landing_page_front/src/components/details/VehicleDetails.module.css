@@ -1,0 +1,70 @@
+.detailsContainer {
+  display: flex;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 3rem 1rem;
+  gap: 2rem;
+}
+
+.infoColumn {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.title {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+.description {
+  margin-bottom: 2rem;
+  line-height: 1.6;
+}
+
+.specs {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.5rem;
+}
+
+.specItem {
+  display: flex;
+  flex-direction: column;
+  padding: 1rem;
+  border-radius: 8px;
+}
+
+.specLabel {
+  display: flex;
+  align-items: center;
+  font-size: 0.9rem;
+  color: #666;
+  margin-bottom: 0.5rem;
+  text-transform: uppercase;
+  font-weight: 500;
+}
+
+.icon {
+  margin-right: 0.5rem;
+  font-size: 1.1rem;
+  color: #333;
+}
+
+.specValue {
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #333;
+}
+
+.img {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  margin-top: 4rem;
+}
+
+.vehicleImage {
+  max-width: 100%;
+  height: auto;
+}
