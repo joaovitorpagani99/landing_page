@@ -1,0 +1,42 @@
+.containerRoot {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 3rem 1rem;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  flex: 1;
+}
+
+.container h1 {
+  font-size: 5rem;
+  font-weight: bold;
+  margin-bottom: 15px;
+}
+
+.subtext {
+  display: flex;
+  flex-direction: column;
+}
+
+.subtext span {
+  font-size: 1.5rem;
+  font-weight: 400;
+}
+
+
+.containerImg {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+}
+
+.containerImg img {
+  max-width: 100%;
+  height: auto;
+}

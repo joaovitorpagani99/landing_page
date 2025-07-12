@@ -4,12 +4,16 @@
   box-sizing: border-box;
 }
 
-body {
+body,
+html {
   font-family: Arial, sans-serif;
+  width: 100%;
+  height: 100%;
   background-color: #fff;
 }
 
-a {
-  color: inherit;
-  text-decoration: none;
+main {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
 }
