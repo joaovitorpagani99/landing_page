@@ -4,6 +4,7 @@ import Header from "../components/header/Header";
 import Highlight from "../components/highlight/Highlight";
 import { getVehicle } from "../service/vehicleService";
 import VeicleDetails from "../components/details/VehicleDetails";
+import ContactForm from "../components/ContactForm/ContactForm";
 
 function Home() {
   const [vehicle, setImagesVeicle] = useState([]);
@@ -31,6 +32,7 @@ function Home() {
       <Highlight />
       <Gallery images={vehicle.images} />
       <VeicleDetails vehicle={vehicle} />
+      <ContactForm />
     </main>
   )
 }
