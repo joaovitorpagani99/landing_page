@@ -15,19 +15,23 @@ ContactMessage.delete_all
 
 
 vehicle = Vehicle.create!(
-  brand: "Toyota",
-  model: "Corolla XEi",
-  year: 2020,
-  color: "Prata",
+  brand: "Jeep",
+  model: "Wrangler Sahara",
+  year: 2025,
+  color: "Azul",
   mileage: 45000,
   price: 89900.00
 )
 
 images = [
-  "https://cdn.motor1.com/images/mgl/MbWRR/s1/2020-toyota-corolla.jpg",
-  "https://cdn.motor1.com/images/mgl/JYY0n/s1/2020-toyota-corolla-xse.jpg",
-  "https://cdn.motor1.com/images/mgl/1EqqX/s1/2020-toyota-corolla-interior.jpg",
-  "https://cdn.motor1.com/images/mgl/JqYY3/s1/2020-toyota-corolla-rear.jpg"
+  "https://www.jeep.pt/content/dam/jeep/crossmarket/wrangler-my-25/phev/06-trim-selector/sahara/figurines/JEEP-WRANGLER-SAHARA-MY25-PHEV-HYDRO-BLUE-FIGURINES.png",
+  "https://www.jeep.pt/content/dam/jeep/crossmarket/wrangler-my-25/phev/06-trim-selector/sahara/figurines/JEEP-WRANGLER-SAHARA-MY25-PHEV-HYDRO-BLUE-FIGURINES.png",
+  "https://static.shopcar.com.br/stored/news/1723248897_93729.jpg",
+  "https://carrosbemmontados.com.br/wp-content/uploads/2023/07/Jeep-Wrangler-2024.png.webp",
+  "https://cdnwp.dealerk.com/eed49ed7/uploads/sites/715/2023/09/jeep-wrangler-mca-my24-phev-visor_70d82n.png",
+  "https://production.autoforce.com/uploads/picture/image/256403367/main_webp_comprar-wrangler-2023-c6d5d8ce-77be-42b4-a9fb-62d0c9467062_d36081a7ae.png.webp",
+  "https://www.jeep.com.br/content/dam/jeep/wrangler/2024/galeria-02-mobile.webp",
+  "https://www.megautos.com/wp-content/uploads/2025/01/Jeep_Wrangler_Rubicom_My25_h1.jpg"
 ]
 
 images.each do |url|
