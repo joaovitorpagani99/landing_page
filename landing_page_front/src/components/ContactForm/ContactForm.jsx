@@ -1,6 +1,7 @@
 import { useForm } from "react-hook-form";
 import styles from "./ContactForm.module.css";
 import { useState } from "react";
+import { saveContact } from "../../service/vehicleService";
 
 function ContactForm() {
   const {
@@ -9,18 +10,20 @@ function ContactForm() {
     formState: { errors, isSubmitting },
     reset,
   } = useForm();
-
+  const [formError, setFormError] = useState(null);
   const [submitted, setSubmitted] = useState(false);
 
   const onSubmit = async (data) => {
-    console.log("Dados enviados:", data);
-
+    setFormError(null);
     try {
-      await new Promise((resolve) => setTimeout(resolve, 1500));
+      await saveContact(data);
       setSubmitted(true);
       reset();
     } catch (error) {
       console.error("Erro ao enviar formulário:", error);
+      setFormError(
+        "Não foi possível enviar o formulário. Tente novamente mais tarde."
+      );
     }
   };
 
@@ -152,6 +155,11 @@ function ContactForm() {
             </button>
           </div>
         </form>
+      )}
+      {formError && (
+        <div className={styles.errorContainer}>
+          <p className={styles.formErrorMessage}>{formError}</p>
+        </div>
       )}
     </section>
   );

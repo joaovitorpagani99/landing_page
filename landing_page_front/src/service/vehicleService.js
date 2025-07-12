@@ -8,10 +8,44 @@ export async function getVehicle() {
     }
 
     const vehicle = await response.json();
-    console.log(vehicle)
     return vehicle;
   } catch (error) {
     console.error('Erro ao buscar veículo:', error);
+    throw error;
+  }
+}
+
+export async function saveContact(data) {
+  try {
+    if (!data.name || !data.phone || !data.email || !data.message) {
+      throw new Error("Dados incompletos. Todos os campos são obrigatórios.");
+    }
+
+    const formattedData = {
+      contact_message: {
+        name: data.name,
+        phone: data.phone,
+        email: data.email,
+        message: data.message
+      }
+    };
+
+    const response = await fetch(`${API_BASE_URL}/contact`, {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify(formattedData),
+    });
+
+    if (!response.ok) {
+      throw new Error(`Erro na requisição: ${response.status}`);
+    }
+
+    const responseData = await response.json();
+    return responseData;
+  } catch (error) {
+    console.error("Erro ao salvar contato", error);
     throw error;
   }
 }

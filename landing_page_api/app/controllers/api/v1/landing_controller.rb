@@ -31,6 +31,6 @@ class Api::V1::LandingController < ApplicationController
   private
 
   def contact_params
-    params.require(:contact_message).permit(:name, :phone, :message)
+    params.require(:contact_message).permit(:name, :phone, :message, :email)
   end
 end
