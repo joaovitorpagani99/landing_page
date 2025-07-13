@@ -1,24 +1,45 @@
-# README
+# Landing Page API
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Esta API fornece endpoints para exibir a informação de veículo, loja e receber mensagens de contato para uma landing page automotiva.
 
-Things you may want to cover:
+## Endpoints
 
-* Ruby version
+- **GET /api/v1/landing/vehicle**  
+  Retorna o veículo em destaque com suas imagens.
 
-* System dependencies
+- **GET /api/v1/landing/store**  
+  Retorna informações da loja (nome e WhatsApp).
 
-* Configuration
+- **POST /api/v1/landing/contact**  
+  Recebe mensagens de contato.  
+  Parâmetros esperados (JSON):  
+  - `name` (string, obrigatório)
+  - `phone` (string, obrigatório)
+  - `email` (string, obrigatório, formato válido)
+  - `message` (string, obrigatório)
 
-* Database creation
+## Execução em desenvolvimento
 
-* Database initialization
+Para iniciar a API localmente:
 
-* How to run the test suite
+```sh
+bin/rails server
+```
 
-* Services (job queues, cache servers, search engines, etc.)
+Acesse: [http://localhost:3000](http://localhost:3000)
 
-* Deployment instructions
+## URL de produção
 
-* ...
+A API está disponível em produção em:
+
+```
+https://des-auto.onrender.com/api/v1/landing
+```
+
+## Testes
+
+Execute todos os testes com:
+
+```sh
+bin/rails test
+```
