@@ -24,8 +24,8 @@ vehicle = Vehicle.create!(
 )
 
 images = [
-  "https://www.jeep.pt/content/dam/jeep/crossmarket/wrangler-my-25/phev/06-trim-selector/sahara/figurines/JEEP-WRANGLER-SAHARA-MY25-PHEV-HYDRO-BLUE-FIGURINES.png",
-  "https://www.jeep.pt/content/dam/jeep/crossmarket/wrangler-my-25/phev/06-trim-selector/sahara/figurines/JEEP-WRANGLER-SAHARA-MY25-PHEV-HYDRO-BLUE-FIGURINES.png",
+  "https://www.topgear.com/sites/default/files/cars-car/image/2024/04/1-Jeep-Wrangler-review-2024.jpg?w=1280&h=720",
+  "https://carroscomcamanzi.com.br/wp-content/uploads/2023/04/Jeep-Wrangler-2024.jpg",
   "https://static.shopcar.com.br/stored/news/1723248897_93729.jpg",
   "https://carrosbemmontados.com.br/wp-content/uploads/2023/07/Jeep-Wrangler-2024.png.webp",
   "https://cdnwp.dealerk.com/eed49ed7/uploads/sites/715/2023/09/jeep-wrangler-mca-my24-phev-visor_70d82n.png",
@@ -41,5 +41,5 @@ end
 
 Client.create!(
   name: "Loja Pagani",
-  whatsapp: "61 9 9245 3208"
+  whatsapp: "61992453208"
 )

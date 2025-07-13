@@ -67,7 +67,7 @@ function Header() {
             </li>
             <li>
               <Link
-                to="#"
+                to="/sobre"
                 className={active === "sobre" ? styles.active : ""}
                 onClick={() => {
                   setActive("sobre");

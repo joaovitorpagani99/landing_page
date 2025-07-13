@@ -10,6 +10,7 @@ import Footer from "./components/Footer/Footer";
 import PageLoader from "./components/Loading/PageLoader";
 
 import "./index.css";
+import Sobre from "./pages/Sobre/Sobre";
 
 createRoot(document.getElementById("root")).render(
   <StrictMode>
@@ -19,6 +20,7 @@ createRoot(document.getElementById("root")).render(
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/contato" element={<ContactPage />} />
+          <Route path="/sobre" element={<Sobre />} />
         </Routes>
         <Footer />
       </PageLoader>
