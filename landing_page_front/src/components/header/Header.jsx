@@ -2,6 +2,7 @@ import styles from "../header/Header.module.css";
 import logo from "../../assets/Logo.svg";
 import { useState } from "react";
 import { FaWhatsapp } from "react-icons/fa";
+import { Link } from "react-router-dom";
 
 function Header() {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -27,8 +28,8 @@ function Header() {
         <nav className={`${styles.navigation} ${menuOpen ? styles.open : ""}`}>
           <ul>
             <li>
-              <a
-                href="#sobre"
+              <Link
+                to="/"
                 className={active === "home" ? styles.active : ""}
                 onClick={() => {
                   setActive("home");
@@ -36,11 +37,11 @@ function Header() {
                 }}
               >
                 Home
-              </a>
+              </Link>
             </li>
             <li>
-              <a
-                href="#contato"
+              <Link
+                to="/contato"
                 className={active === "contato" ? styles.active : ""}
                 onClick={() => {
                   setActive("contato");
@@ -48,11 +49,11 @@ function Header() {
                 }}
               >
                 Contato
-              </a>
+              </Link>
             </li>
             <li>
-              <a
-                href="#anunciar"
+              <Link
+                to="#"
                 className={active === "sobre" ? styles.active : ""}
                 onClick={() => {
                   setActive("sobre");
@@ -60,11 +61,11 @@ function Header() {
                 }}
               >
                 Sobre
-              </a>
+              </Link>
             </li>
           </ul>
 
-          <a
+          <Link
             href="https://wa.me/5561992453208"
             target="_blank"
             rel="noopener noreferrer"
@@ -72,7 +73,7 @@ function Header() {
           >
             <FaWhatsapp style={{ marginRight: 8, verticalAlign: "middle" }} />
             Fale com o lojista
-          </a>
+          </Link>
         </nav>
       </div>
     </header>
