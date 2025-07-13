@@ -1,5 +1,5 @@
-import styles from '../header/Header.module.css'
-import logo from '../../assets/Logo.svg'
+import styles from "../header/Header.module.css";
+import logo from "../../assets/Logo.svg";
 
 function Header() {
   return (
@@ -10,14 +10,20 @@ function Header() {
         </div>
         <nav className={styles.navigation}>
           <ul>
-            <li>sobre</li>
-            <li>contato</li>
-            <li>anunciar</li>
+            <li>
+              <a href="#sobre">Home</a>
+            </li>
+            <li>
+              <a href="#contato">Contato</a>
+            </li>
+            <li>
+              <a href="#anunciar">Sobre</a>
+            </li>
           </ul>
         </nav>
       </div>
     </header>
-  )
+  );
 }
 
 export default Header;
