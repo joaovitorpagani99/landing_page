@@ -40,6 +40,6 @@ end
 
 
 Client.create!(
-  name: "Loja Top Carros",
-  whatsapp: "5599999999999"
+  name: "Loja Pagani",
+  whatsapp: "61 9 9245 3208"
 )
