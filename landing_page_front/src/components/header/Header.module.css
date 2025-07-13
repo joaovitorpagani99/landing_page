@@ -7,6 +7,7 @@
 
 .container {
   display: flex;
+  justify-content: space-between;
   align-items: center;
   width: 100%;
   padding: 0 1rem;
@@ -14,8 +15,13 @@
 }
 
 .logo {
-  flex: 1;
+  flex: 0 0 auto;
   margin-left: 10rem;
+}
+
+.logo img {
+  max-width: 120px;
+  height: auto;
 }
 
 .navigation {
@@ -50,6 +56,99 @@
 }
 
 .active {
-  color: #007bff;
-  border-bottom: 2px solid #007bff;
+  color: #007bff !important;
+  border-bottom: 2px solid #007bff !important;
+}
+
+.menuButton {
+  display: none;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 30px;
+  height: 21px;
+  cursor: pointer;
+}
+
+.menuButton span {
+  display: block;
+  height: 3px;
+  width: 100%;
+  background-color: #333;
+  transition: all 0.3s ease;
+}
+
+@media screen and (max-width: 992px) {
+  .logo {
+    margin-left: 2rem;
+  }
+
+  .navigation ul {
+    margin-right: 2rem;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .menuButton {
+    display: flex;
+    z-index: 1000;
+  }
+
+  .logo {
+    margin-left: 1rem;
+  }
+
+  .navigation {
+    position: fixed;
+    top: 0;
+    right: -100%;
+    width: 70%;
+    height: 100vh;
+    background-color: white;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    transition: right 0.3s ease;
+    box-shadow: -5px 0 15px rgba(0, 0, 0, 0.1);
+    z-index: 999;
+  }
+
+  .navigation.open {
+    right: 0;
+  }
+
+  .navigation ul {
+    flex-direction: column;
+    margin-right: 0;
+    text-align: center;
+  }
+
+  .navigation ul li {
+    margin: 15px 0;
+  }
+
+  .open+.menuButton span:nth-child(1) {
+    transform: rotate(45deg) translate(5px, 5px);
+  }
+
+  .open+.menuButton span:nth-child(2) {
+    opacity: 0;
+  }
+
+  .open+.menuButton span:nth-child(3) {
+    transform: rotate(-45deg) translate(7px, -6px);
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .container {
+    padding: 0 0.5rem;
+  }
+
+  .logo img {
+    max-width: 100px;
+  }
+
+  .navigation {
+    width: 80%;
+  }
 }
