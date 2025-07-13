@@ -68,3 +68,76 @@
   max-width: 100%;
   height: auto;
 }
+
+/* Mantenha seu CSS atual e adicione estas media queries ao final */
+
+/* Para tablets */
+@media screen and (max-width: 992px) {
+  .detailsContainer {
+    padding: 2rem 1rem;
+    gap: 1.5rem;
+  }
+
+  .title {
+    font-size: 1.8rem;
+  }
+
+  .specs {
+    gap: 1rem;
+  }
+
+  .specItem {
+    padding: 0.8rem;
+  }
+
+  .img {
+    margin-top: 2rem;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .detailsContainer {
+    flex-direction: column-reverse;
+    padding: 1.5rem 1rem;
+  }
+
+  .infoColumn {
+    width: 100%;
+  }
+
+  .title {
+    font-size: 1.6rem;
+    text-align: center;
+  }
+
+  .description {
+    text-align: center;
+  }
+
+  .img {
+    margin: 0 auto 2rem;
+    max-width: 80%;
+  }
+
+  .specs {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .title {
+    font-size: 1.4rem;
+  }
+
+  .specLabel {
+    font-size: 0.8rem;
+  }
+
+  .specValue {
+    font-size: 1.1rem;
+  }
+
+  .img {
+    max-width: 100%;
+  }
+}
