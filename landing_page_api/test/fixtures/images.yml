@@ -1,9 +1,9 @@
 # Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
 one:
-  url: MyString
+  url: https://exemplo.com/imagem1.jpg
   vehicle: one
 
 two:
-  url: MyString
-  vehicle: two
+  url: https://exemplo.com/imagem2.jpg
+  vehicle: one

@@ -1,17 +1,51 @@
 # Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
 one:
-  brand: MyString
-  model: MyString
-  year: 1
-  color: MyString
-  mileage: 1
-  price: 9.99
+  brand: Jeep
+  model: Wrangler
+  year: 2022
+  color: Azul
+  mileage: 45000
+  price: 89900.00
 
-two:
-  brand: MyString
-  model: MyString
-  year: 1
-  color: MyString
-  mileage: 1
-  price: 9.99
+empty_brand:
+  model: Wrangler
+  year: 2022
+  color: Azul
+  mileage: 45000
+  price: 89900.00
+
+empty_model:
+  brand: Jeep
+  year: 2022
+  color: Azul
+  mileage: 45000
+  price: 89900.00
+
+empty_year:
+  brand: Jeep
+  model: Wrangler
+  color: Azul
+  mileage: 45000
+  price: 89900.00
+
+empty_color:
+  brand: Jeep
+  model: Wrangler
+  year: 2022
+  mileage: 45000
+  price: 89900.00
+
+empty_mileage:
+  brand: Jeep
+  model: Wrangler
+  year: 2022
+  color: Azul
+  price: 89900.00
+
+empty_price:
+  brand: Jeep
+  model: Wrangler
+  year: 2022
+  color: Azul
+  mileage: 45000

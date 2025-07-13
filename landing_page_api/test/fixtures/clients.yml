@@ -1,9 +1,19 @@
 # Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
 one:
-  name: MyString
-  whatsapp: MyString
+  name: loja 1
+  whatsapp: 111111111
 
-two:
-  name: MyString
-  whatsapp: MyString
+# erro
+
+one:
+  name: loja 1
+  whatsapp: 111111111
+
+empty_name:
+  whatsapp: 222222222
+
+empty_whatsapp:
+  name: loja sem whatsapp
+
+empty: {}

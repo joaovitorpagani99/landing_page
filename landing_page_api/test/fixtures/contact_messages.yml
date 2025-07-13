@@ -1,11 +1,33 @@
 # Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
 one:
-  name: MyString
-  phone: MyString
-  message: MyText
+  name: João
+  phone: "5599999999999"
+  email: joao@email.com
+  message: Quero saber mais!
 
-two:
-  name: MyString
-  phone: MyString
-  message: MyText
+empty_name:
+  phone: "5599999999999"
+  email: joao@email.com
+  message: Quero saber mais!
+
+empty_phone:
+  name: João
+  email: joao@email.com
+  message: Quero saber mais!
+
+empty_email:
+  name: João
+  phone: "5599999999999"
+  message: Quero saber mais!
+
+invalid_email:
+  name: João
+  phone: "5599999999999"
+  email: email_invalido
+  message: Quero saber mais!
+
+empty_message:
+  name: João
+  phone: "5599999999999"
+  email: joao@email.com
