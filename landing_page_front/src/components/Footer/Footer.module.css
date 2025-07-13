@@ -31,3 +31,39 @@
 .icon {
   font-size: 1.5rem;
 }
+
+
+@media screen and (max-width: 768px) {
+  .footer {
+    padding: 2rem;
+  }
+
+  .socialIcons {
+    gap: 1.5rem;
+  }
+
+  .icon {
+    font-size: 1.3rem;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .footer {
+    padding: 1.5rem;
+  }
+
+  .logoContainer img {
+    height: 40px;
+    margin-bottom: 15px;
+  }
+
+  .socialIcons {
+    gap: 1rem;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .icon {
+    font-size: 1.2rem;
+  }
+}
