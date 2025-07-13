@@ -1,7 +1,7 @@
-import styles from '../highlight/Highlight.module.css'
+import styles from "../highlight/Highlight.module.css";
 
-import jeep from '../../assets/jeep-wrangler.svg'
- 
+import jeep from "../../assets/jeep-wrangler.svg";
+
 function Highlight() {
   return (
     <section className={styles.containerRoot}>
@@ -16,11 +16,10 @@ function Highlight() {
       </div>
 
       <div className={styles.containerImg}>
-        <img src={ jeep } />
+        <img src={jeep} />
       </div>
     </section>
-  )
+  );
 }
-
 
 export default Highlight;
