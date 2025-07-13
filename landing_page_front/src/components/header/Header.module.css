@@ -77,6 +77,22 @@
   transition: all 0.3s ease;
 }
 
+.whatsappButton {
+  display: inline-block;
+  background: #25D366;
+  color: #fff;
+  padding: 10px 10px;
+  border-radius: 25px;
+  text-decoration: none;
+  font-weight: 500;
+  margin-right: 1rem;
+  transition: background 0.2s;
+}
+
+.whatsappButton:hover {
+  background: #1ebe5d;
+}
+
 @media screen and (max-width: 992px) {
   .logo {
     margin-left: 2rem;
@@ -124,6 +140,12 @@
 
   .navigation ul li {
     margin: 15px 0;
+  }
+
+  .whatsappButton {
+    margin: 2rem 0 0 0;
+    width: 80%;
+    text-align: center;
   }
 
   .open+.menuButton span:nth-child(1) {

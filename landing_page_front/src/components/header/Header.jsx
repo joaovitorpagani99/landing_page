@@ -1,6 +1,7 @@
 import styles from "../header/Header.module.css";
 import logo from "../../assets/Logo.svg";
 import { useState } from "react";
+import { FaWhatsapp } from "react-icons/fa";
 
 function Header() {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -62,6 +63,16 @@ function Header() {
               </a>
             </li>
           </ul>
+
+          <a
+            href="https://wa.me/5561992453208"
+            target="_blank"
+            rel="noopener noreferrer"
+            className={styles.whatsappButton}
+          >
+            <FaWhatsapp style={{ marginRight: 8, verticalAlign: "middle" }} />
+            Fale com o lojista
+          </a>
         </nav>
       </div>
     </header>
