@@ -15,6 +15,21 @@ export async function getVehicle() {
   }
 }
 
+export async function getClient() {
+  try {
+    const response = await fetch(`${API_BASE_URL}/store/`);
+    if (!response.ok) {
+      throw new Error(`Erro ${response.status}: ${response.statusText}`);
+    }
+
+    const client = await response.json();
+    return client;
+  } catch (error) {
+    console.error('Erro ao buscar dados do vendedor:', error);
+    throw error;
+  }
+}
+
 export async function saveContact(data) {
   try {
     if (!data.name || !data.phone || !data.email || !data.message) {

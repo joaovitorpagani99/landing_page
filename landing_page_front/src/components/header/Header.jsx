@@ -1,12 +1,26 @@
 import styles from "../header/Header.module.css";
 import logo from "../../assets/Logo.svg";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { FaWhatsapp } from "react-icons/fa";
 import { Link } from "react-router-dom";
+import { getClient } from "../../service/vehicleService";
 
 function Header() {
   const [menuOpen, setMenuOpen] = useState(false);
   const [active, setActive] = useState("home");
+  const [client, setClient] = useState({});
+
+  useEffect(() => {
+    async function fetchClient() {
+      try {
+        const response = await getClient();
+        setClient(response);
+      } catch (error) {
+        console.log(error);
+      }
+    }
+    fetchClient();
+  }, []);
 
   const toggleMenu = () => {
     setMenuOpen(!menuOpen);
@@ -65,15 +79,15 @@ function Header() {
             </li>
           </ul>
 
-          <Link
-            href="https://wa.me/5561992453208"
+          <a
+            href={`https://wa.me/${client.whatsapp}`}
             target="_blank"
             rel="noopener noreferrer"
             className={styles.whatsappButton}
           >
             <FaWhatsapp style={{ marginRight: 8, verticalAlign: "middle" }} />
-            Fale com o lojista
-          </Link>
+            Fale com {`- ${client.name}`}
+          </a>
         </nav>
       </div>
     </header>
